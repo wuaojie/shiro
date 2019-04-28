@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+
+    <context:component-scan base-package="com.wuaojie"/>
+
+    <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+        <property name="securityManager" ref="securityManager"></property>
+        <property name="loginUrl" value="login.html"></property>
+        <property name="unauthorizedUrl" value="403.html"></property>
+        <property name="filterChainDefinitions">
+            <value>
+                /login.html = anon
+                /subLogin = anon
+                /test = roles["admin","admin1"]
+                /roles =RoleMy["admin","admin1"]
+                /* = authc
+            </value>
+        </property>
+        <!--注入ShiroFilterFactoryBean 中成员变量filters 是个Map-->
+        <property name="filters">
+            <map>
+                <entry key="RoleMy" value-ref="roleMy"></entry>
+            </map>
+        </property>
+
+    </bean>
+    <!--注入自定义filter-->
+    <bean class="com.wuaojie.filter.roleFilter" id="roleMy"/>
+
+    <bean class="org.apache.shiro.web.mgt.DefaultWebSecurityManager" id="securityManager">
+        <!--配置自定义realm-->
+        <property name="realm" ref="realm"/>
+        <!--配置自定义sessionManager-->
+        <property name="sessionManager" ref="sessionManager"/>
+        <!--配置自定义的redisCache-->
+        <property name="cacheManager" ref="cacheManager"/>
+        <!--注入cookie自动登陆用-->
+        <property name="rememberMeManager" ref="cookieRememberMeManager"/>
+    </bean>
+
+    <!--spring注册自定义remlm-->
+    <bean id="realm" class="com.wuaojie.realm.myRealm">
+        <property name="credentialsMatcher" ref="credentialsMatcher"/>
+    </bean>
+
+    <!--设置加密算法和次数-->
+    <bean id="credentialsMatcher" class="org.apache.shiro.authc.credential.HashedCredentialsMatcher">
+        <property name="hashAlgorithmName" value="md5"/>
+        <property name="hashIterations" value="1"/>
+    </bean>
+
+    <!--创建sessionManager对象-->
+    <bean class="com.wuaojie.session.CustomSessionManager" id="sessionManager">
+        <property name="sessionDAO" ref="redisSessionDao"/>
+    </bean>
+
+    <!--创建自定义的sessionDao-->
+    <bean class="com.wuaojie.session.RedisSessionDao" id="redisSessionDao"/>
+
+    <!--创建自定义的chcheManager-->
+    <bean class="com.wuaojie.cache.RedisCacheManager" id="cacheManager"/>
+
+    <!--创建自定义的CookieRememberMeManager-->
+    <bean class="org.apache.shiro.web.mgt.CookieRememberMeManager" id="cookieRememberMeManager">
+        <property name="cookie" ref="cookie"/>
+    </bean>
+    <bean class="org.apache.shiro.web.servlet.SimpleCookie" id="cookie">
+        <!--构造器传cookie的名称-->
+        <constructor-arg value="remember"/>
+        <!--cookie的存活时间-->
+        <property name="maxAge" value="600"/>
+    </bean>
+</beans>
