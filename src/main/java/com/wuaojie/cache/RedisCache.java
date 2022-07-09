@@ -31,6 +31,7 @@ public class RedisCache<K, V> implements Cache<K, V> {
         byte[] value = jedisUtil.get(getKey(k));
         if (value != null) {
             return (V) SerializationUtils.deserialize(value);
+
         }
         return null;
     }
