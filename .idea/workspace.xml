@@ -5,19 +5,13 @@
       <artifact name="shrioTest:war" />
     </artifacts-to-build>
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa30d5da-0add-4679-9d7b-a04f95d3a0ba" name="默认更改列表" comment="">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wuaojie/cache/RedisCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wuaojie/cache/RedisCache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wuaojie/controller/shiroTestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wuaojie/controller/shiroTestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wuaojie/realm/myRealm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wuaojie/realm/myRealm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wuaojie/session/CustomSessionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wuaojie/session/CustomSessionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring.xml" afterDir="false" />
+    <list default="true" id="fa30d5da-0add-4679-9d7b-a04f95d3a0ba" name="默认更改列表" comment="init">
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -149,14 +143,9 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="localRepository" value="F:\repository" />
-        <option name="mavenHome" value="D:/softWare/apache-maven-3.6.0" />
+        <option name="mavenHome" value="D:\softWare\apache-maven-3.6.0" />
         <option name="userSettingsFile" value="D:\softWare\apache-maven-3.6.0\conf\settings.xml" />
       </MavenGeneralSettings>
-    </option>
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
     </option>
   </component>
   <component name="MavenProjectNavigator">
@@ -189,6 +178,7 @@
     <option name="width" value="1400" />
     <option name="height" value="800" />
   </component>
+  <component name="ProjectId" id="2BgrZYJkoVqPcOk87n4wUmWZ3Na" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -341,8 +331,15 @@
       <pane id="Scope" />
     </panes>
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SearchEverywhereHistoryKey" value="credentialsMatcher&#9;null&#9;null&#10;shiro&#9;FILE&#9;jar://F:/repository/org/apache/shiro/shiro-cache/1.4.0/shiro-cache-1.4.0-sources.jar!/org/apache/shiro&#10;mybatis&#9;PSI&#9;JAVA://com.baomidou.mybatisplus.core.MybatisConfiguration" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -370,18 +367,6 @@
       <recent name="F:\JavaWorkSpace\shrioTest\src\main\java\com\wuaojie" />
       <recent name="F:\JavaWorkSpace\shrioTest\src\main\resources" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Tomcat Server.shrioWeb">
     <configuration default="true" type="Application" factoryName="Application">
@@ -593,6 +578,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SpringGeneralSettings">
     <option name="allowAutoConfigurationMode" value="true" />
     <option name="showMultipleContextsPanel" value="false" />
@@ -622,6 +608,7 @@
       <workItem from="1561121963015" duration="6943000" />
       <workItem from="1564572381919" duration="742000" />
       <workItem from="1572665744085" duration="1831000" />
+      <workItem from="1657338627788" duration="451000" />
     </task>
     <task id="LOCAL-00001" summary="111">
       <created>1556459934553</created>
@@ -630,7 +617,14 @@
       <option name="project" value="LOCAL" />
       <updated>1556459934553</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="init">
+      <created>1657338750321</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1657338750321</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -722,14 +716,48 @@
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="1" value="TOOL_WINDOW" />
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="111" />
-    <option name="LAST_COMMIT_MESSAGE" value="111" />
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -737,14 +765,9 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0-sources.jar!/org/apache/shiro/subject/support/DelegatingSubject.java</url>
           <line>450</line>
-          <properties />
           <option name="timeStamp" value="70" />
         </line-breakpoint>
       </breakpoints>
-      <breakpoints-dialog>
-        <breakpoints-dialog />
-      </breakpoints-dialog>
-      <option name="time" value="71" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
